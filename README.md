@@ -7,6 +7,12 @@ Problem Statement
 Design and implement a Recommendation System for restaurants based on customer reviews.
 The goal is to develop a system that suggests restaurants to users based on their preferences and historical review data.
 
+Problem Statement
+
+Design and implement a Recommendation System for restaurants based on customer reviews.
+
+The goal is to develop a system that suggests restaurants to users based on their preferences and historical review data.
+
 Why
 
 The purpose of creating a Restaurant Recommendation System based on customer reviews is to enhance user satisfaction by providing personalized dining suggestions and to drive business growth through data-driven insights and increased user engagement.
