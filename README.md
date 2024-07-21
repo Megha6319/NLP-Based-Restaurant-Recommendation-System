@@ -232,7 +232,7 @@ Top 10 Recommended Restaurants that people should visit if they had previously v
 Conclusion
 
 A restaurant recommender system utilizes customer similarity to suggest dining options based on their preferences. By analyzing patterns in user interactions with restaurants, these systems enhance user experience by offering personalized recommendations that align closely with individual tastes and interests. This approach not only increases customer satisfaction but also fosters engagement and loyalty by consistently delivering relevant dining choices.
-Explore the project on GitHub here : https://github.com/Megha6319/NLP-Based-Restaurant-Recommendation-System
+
 Explore a website prototype here : https://megha6319.github.io/NLP-Based-Restaurant-Recommendation-System/
 
 
