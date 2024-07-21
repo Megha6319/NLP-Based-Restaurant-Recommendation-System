@@ -176,17 +176,27 @@ Plotting: Use a bar chart to visually represent the frequency or importance of e
 
 Step 6 : Recommendation Algorithm: Collaborative Filtering
 Collaborative filtering is a Recommendation Technique that predicts user preferences by finding similarities between users or items based on their interactions.
+
 i. Creating a Super-Score Rating
+
 The Super-Score is calculated based on a combination of the Rating and the length of the Review for each row in the DataFrame.
 To develop a rating score that reflects each user's overall preference for a restaurant.
+
 ii. Creating User-Item Matrix
+
 One key component of collaborative filtering is the User-Item Matrix, which organizes user-item interactions into a structured format suitable for analysis and recommendation generation.
+
 iii. Cosine Similarity
+
 Cosine similarity is a measure used in natural language processing to determine the similarity between two non-zero vectors by calculating the cosine of the angle between them.
 It ranges from -1 to 1, where 1 indicates identical vectors, 0 indicates orthogonal (completely dissimilar) vectors, and -1 indicates diametrically opposite vectors.
+
 iv. Truncated SVD
+
 Truncated SVD (Singular Value Decomposition) is a dimensionality reduction technique that approximates a large matrix by decomposing it into its singular vectors and selecting only the top components. This helps in reducing the computational complexity while preserving the essential structure and relationships within the data.
+
 v. Item-Item Matrix
+
 An Item-Item Matrix, also known as an Item-Item Similarity Matrix, is a matrix that measures the similarity between items (or products) based on user interactions. Unlike the User-Item Matrix, which focuses on user preferences for items, the Item-Item Matrix focuses on relationships between items themselves.
 
 Results
@@ -197,7 +207,9 @@ Let's also explore the Top 10 Recommended Restaurants for people who have previo
 Comparing the Super Score Ratings and Restaurants between Paradise and the 3 highest recommended restaurants.
 
 Step 7 : Deployment and Integration
+
 Sign Up Page
+
 The Sign-Up page allows new users to create an account on the NLP - Based Restaurant Recommendation System platform. To sign up, users need to provide the following details:
 Username: Choose a unique username that will be used to identify your account.
 Password: Create a secure password to protect your account. Ensure it is strong and includes a mix of letters, numbers, and special characters.
@@ -206,6 +218,7 @@ Email: Enter a valid email address where you can receive account-related notific
 Once the required information is provided, users can submit the form to create their account. If you already have an account, you can quickly navigate to the Login page to access your existing account.
 
 Login Page
+
 The Login page is designed for users who already have an account and wish to access their account. To log in, users need to provide:
 Username: Enter the username associated with your account.
 Password: Input the password that you created during sign-up.
@@ -221,6 +234,8 @@ Conclusion
 A restaurant recommender system utilizes customer similarity to suggest dining options based on their preferences. By analyzing patterns in user interactions with restaurants, these systems enhance user experience by offering personalized recommendations that align closely with individual tastes and interests. This approach not only increases customer satisfaction but also fosters engagement and loyalty by consistently delivering relevant dining choices.
 Explore the project on GitHub here : https://github.com/Megha6319/NLP-Based-Restaurant-Recommendation-System
 Explore a website prototype here : https://megha6319.github.io/NLP-Based-Restaurant-Recommendation-System/
+
+
 References
 
 1. CateGitau. (2021). restaurant-recommendation-system. GitHub. https://github.com/CateGitau/restaurant-recommendation-system/tree/main
