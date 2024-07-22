@@ -1,6 +1,6 @@
-## NLP-Based Restaurant Recommendation System
+# NLP-Based Restaurant Recommendation System
 
-# Introduction
+## Introduction
 
 In the digital age, the abundance of choices can make finding the perfect restaurant an overwhelming task. With countless dining options available, how can one ensure they are making the best choice? This is where Recommendation Systems come into play. By harnessing the power of Natural Language Processing (NLP), we can transform the way users discover new restaurants.
 Problem Statement
