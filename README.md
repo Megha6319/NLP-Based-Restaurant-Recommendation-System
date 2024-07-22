@@ -93,24 +93,31 @@ One restaurant has 86 reviews.
 98 restaurants have 100 reviews each, indicating varying levels of popularity and customer engagement.
 
 Step 3 : NLP Preprocessing
+
 I. Tokenization and Text Cleaning
+
 To prepare the 'Review' column for NLP analysis, I employed several preprocessing techniques:
+
 URL Removal:
 
 Utilized regex (url_regex = r'http\S+|www\S+') to identify and remove URLs from the text data. This ensures that web links do not interfere with the analysis of restaurant reviews.
 
 2. Email Address Removal:
+3. 
 Employed regex (email_regex = r'\S+@\S+') to identify and remove email addresses from the text data, as they are not relevant to restaurant review analysis.
 
-3. User Mention Removal:
+4. User Mention Removal:
+5. 
 Applied regex (user_regex = r'@\w+') to identify and remove user mentions (e.g., @username) from the text data. This step removes references to specific users that do not contribute to the restaurant review insights.
 
-4. Non-Alphabetic Character Removal:
+6. Non-Alphabetic Character Removal:
+   
 Implemented regex (general_pattern = r'[^a-zA-Z]') to replace all non-alphabetic characters in the 'Review' column with spaces. This includes special characters, digits, and punctuation marks, ensuring that only alphabetic tokens remain for further analysis.
 
 Tokenization and Lowercasing
 
 Normalized and tokenized the 'Review' column by:
+
   i. Converting all words to lowercase.
  ii. Splitting the text into individual tokens.
  iii. Replacing punctuation like commas and periods with spaces.
