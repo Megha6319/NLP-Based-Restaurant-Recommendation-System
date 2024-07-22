@@ -1,5 +1,8 @@
 ###  NLP-Based Restaurant Recommendation System
 
+![me](https://github.com/user-attachments/assets/d45c7809-e077-4b49-8df9-b635bf61a1fb)
+
+
  Introduction
 
 In the digital age, the abundance of choices can make finding the perfect restaurant an overwhelming task. With countless dining options available, how can one ensure they are making the best choice? This is where Recommendation Systems come into play. By harnessing the power of Natural Language Processing (NLP), we can transform the way users discover new restaurants.
