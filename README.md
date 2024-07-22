@@ -6,9 +6,11 @@
  Introduction
 
 In the digital age, the abundance of choices can make finding the perfect restaurant an overwhelming task. With countless dining options available, how can one ensure they are making the best choice? This is where Recommendation Systems come into play. By harnessing the power of Natural Language Processing (NLP), we can transform the way users discover new restaurants.
+
 Problem Statement
-Design and implement a Recommendation System for restaurants based on customer reviews.
-The goal is to develop a system that suggests restaurants to users based on their preferences and historical review data.
+
+- Design and implement a Recommendation System for restaurants based on customer reviews.
+- The goal is to develop a system that suggests restaurants to users based on their preferences and historical review data.
 
 Problem Statement
 
@@ -66,12 +68,15 @@ Step 1 : Data Collection and Preparation
 The column '7514' has only one unique value (2447), and rest are blank values , neither of which contributes meaningful information to the dataset. To streamline further analysis and improve dataset relevance, the decision is made to remove column '7514' entirely. This action is justified as the column's content does not provide useful variability or contribute meaningfully to the analysis goals.
 
 2. Handling Duplicated Rows :
+   
 I decided to drop the 36 duplicated rows from the dataset.
 
 3. Handling Unexpected Values in 'Rating' Column :
+   
 The data in the Rating column contained the unexpected value "Like". I replaced the string 'Like' with mode_rating, which represents the most frequent value in the Rating column.
 
 4. Data Type Adjustment for 'Rating' Column:
+   
 The 'Rating' column's data type is being changed from 'int' to 'float' to accommodate values like 4.5, 3.5, 2.5, and 1.5, which are decimal numbers.
 
 5. Selection of Relevant Columns for NLP Processing:
@@ -80,17 +85,20 @@ I selected the columns 'Restaurant', 'Reviewer', 'Review', 'Rating', and 'Time' 
 Step 2 : Exploratory Data Analysis (EDA)
 
 1. Distribution of Ratings :
-The ratings in the dataset range from 1.0 to 5.0.
-The highest rating observed is 5.0, with 3835 reviews.
-The lowest rating observed is 1.5, with only 9 reviews.
+   
+- The ratings in the dataset range from 1.0 to 5.0.
+- The highest rating observed is 5.0, with 3835 reviews.
+- The lowest rating observed is 1.5, with only 9 reviews.
 
 2. Number of Reviews by Year :
-The year 2018 had the highest number of reviews, totalling 4903.
+
+- The year 2018 had the highest number of reviews, totalling 4903.
 
 3. Number of Reviews by Month:
-May 2019 stands out with the highest number of reviews among all months, totalling 1349.
+   
+- May 2019 stands out with the highest number of reviews among all months, totalling 1349.
 
-4. Restaurants with High Review Counts :
+6. Restaurants with High Review Counts :
 One restaurant has 78 reviews.
 One restaurant has 86 reviews.
 98 restaurants have 100 reviews each, indicating varying levels of popularity and customer engagement.
@@ -106,14 +114,14 @@ URL Removal:
 Utilized regex (url_regex = r'http\S+|www\S+') to identify and remove URLs from the text data. This ensures that web links do not interfere with the analysis of restaurant reviews.
 
 2. Email Address Removal:
-3. 
+   
 Employed regex (email_regex = r'\S+@\S+') to identify and remove email addresses from the text data, as they are not relevant to restaurant review analysis.
 
-4. User Mention Removal:
-5. 
+3. User Mention Removal:
+   
 Applied regex (user_regex = r'@\w+') to identify and remove user mentions (e.g., @username) from the text data. This step removes references to specific users that do not contribute to the restaurant review insights.
 
-6. Non-Alphabetic Character Removal:
+4. Non-Alphabetic Character Removal:
    
 Implemented regex (general_pattern = r'[^a-zA-Z]') to replace all non-alphabetic characters in the 'Review' column with spaces. This includes special characters, digits, and punctuation marks, ensuring that only alphabetic tokens remain for further analysis.
 
@@ -161,36 +169,47 @@ The vocab.txt file contains a dictionary with 6,865 words mapped to their corres
 Step 4 : Feature Extraction
 
 I. Count Vector Representation
+
 In Natural Language Processing (NLP), a count vector is a sparse numerical representation of a document that captures the frequency of each term (word) it contains.
 For instance, if a sentence includes the word "good" three times, the count vector would represent these frequencies in the document.
 
 II. TF-IDF Vector Representation
+
 TF-IDF (Term Frequency-Inverse Document Frequency) vectorization assigns weights to terms in a document based on their frequency within the document and rarity across a collection of documents. This approach facilitates nuanced document representation and enhances tasks such as information retrieval.
 In TF-IDF vectorization, terms such as "Soumen" and "effective" stand out due to their higher weights, reflecting their significant presence within specific documents compared to their occurrence across the entire document collection.
 
 III. Vector representation
+
 The word "also," indexed as 158 in the vocabulary file, appears once in the sentence, indicating its presence in the vector representation. In contrast, the word "good," indexed as 2550, appears three times, underscoring its higher frequency within the sentence.
+
 Saving required outputs
+
 Here are two files: `rest_cVector`, which contains the count vectors, and `rest_tVector`, which contains the TF-IDF vectors.
 
 Step 5 : Topic Modelling
 
 Topic modeling serves as a powerful tool for uncovering latent themes within a corpus by examining patterns of word co-occurrence. 
 By analyzing the top words associated with each topic and utilizing the topic probabilities saved in topic_probabilities.csv, profound insights emerge into the diverse thematic landscapes encapsulated within the dataset.
+
 To visualize the top 5 words for each topic using a bar chart based on Reviews.
+
 Extract Top Words: Retrieve the top 5 words for each topic from your topic modeling results.
+
 Prepare Data: Organize these words and their associated topics into a format suitable for plotting.
+
 Plotting: Use a bar chart to visually represent the frequency or importance of each word in its respective topic.
 
 "In Topic 0, the prevalent term is 'good,' while 'food' stands out in both Topic 1 and Topic 3. Topic 2 emphasizes the term 'place,' and in Topic 4, 'chicken' is the prominent term."
 
 Step 6 : Recommendation Algorithm: Collaborative Filtering
+
 Collaborative filtering is a Recommendation Technique that predicts user preferences by finding similarities between users or items based on their interactions.
 
 i. Creating a Super-Score Rating
 
-The Super-Score is calculated based on a combination of the Rating and the length of the Review for each row in the DataFrame.
-To develop a rating score that reflects each user's overall preference for a restaurant.
+- The Super-Score is calculated based on a combination of the Rating and the length of the Review for each row in the DataFrame.
+
+- To develop a rating score that reflects each user's overall preference for a restaurant.
 
 ii. Creating User-Item Matrix
 
@@ -243,7 +262,7 @@ Conclusion
 
 A restaurant recommender system utilizes customer similarity to suggest dining options based on their preferences. By analyzing patterns in user interactions with restaurants, these systems enhance user experience by offering personalized recommendations that align closely with individual tastes and interests. This approach not only increases customer satisfaction but also fosters engagement and loyalty by consistently delivering relevant dining choices.
 
-Explore a website prototype here : https://megha6319.github.io/NLP-Based-Restaurant-Recommendation-System/
+Explore the project on GitHub here :  https://github.com/Megha6319/Restaurant-Recommendation-System-Using-NLP
 
 
 References
